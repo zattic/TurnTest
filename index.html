@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding:200px;
+            color:	#C8C8C8  ;
+        }
+        span{
+            font-size: 100px;
+            font-family: "微软雅黑";
+            position: relative;
+        }
+        span:before,span:after{
+            content:attr(data-q);
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: left center;
+            transition:all 0.3s linear 0s;
+        }
+        span:before{
+            color:#D80000;
+            z-index: 3;
+            transform:rotateY(15deg);
+        }
+        span:after{
+            color:rgba(0,0,0,0.3);
+            z-index:2;
+            transform: rotateY(0deg) scale(1.1, 1);
+        }
+        span:hover:before{
+            transform:rotateY(40deg) skew(0deg, 3deg);
+        }
+        span:hover:after{
+            transform:rotateY(40deg) skew(0deg,20deg);
+        }
+        </style>
+</head>
+<body>
+    <span data-q="广">广</span>
+	<span data-q="西">西</span>
+	<span data-q="壮">壮</span>
+	<span data-q="族">族</span>
+	<span data-q="自">自</span>
+	<span data-q="治">治</span>
+	<span data-q="区">区</span>
+    <span data-q="成">成</span>
+    <span data-q="立">立</span>
+    <span data-q="60">60</span>
+    <span data-q="周">周</span>
+    <span data-q="年">年</span>
+</body>
+</html>
